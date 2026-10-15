@@ -1,9 +1,13 @@
-name: Build Cross-Platform Binaries
+name: Build and Release
 
 on:
   push:
     tags:
       - 'v*'
+
+# Required permissions to create releases and write assets
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -43,3 +47,20 @@ jobs:
         with:
           name: ${{ matrix.artifact_name }}
           path: dist/${{ matrix.artifact_name }}*
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist-release
+          merge-multiple: true
+
+      - name: Create GitHub Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist-release/*
+          generate_release_notes: true

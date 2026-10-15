@@ -1,22 +1,24 @@
 [project]
 name = "logdrain"
 version = "0.1.0"
-description = "Add your description here"
+description = "Maintenance diagnostics utility utilizing drain3 templating to parse, derive and summarize polyscope.log files from generated Polyscope support bundle"
 readme = "README.md"
 authors = [
-    { name = "mosf3t", email = "leonardmreidy@gmail.com" }
+    { name = "mosf3t", email = "leonardmreidy@tuta.com" }
 ]
 requires-python = ">=3.11"
 dependencies = [
     "drain3>=0.9.11",
     "pydantic>=2.0.0",
     "pytest>=9.1.1",
-    "openpyxl>=3.1.0"
+    "openpyxl>=3.1.0",
+    "PySide6>=6.0.0"
 ]
 
 [project.scripts]
 # logdrain = "logdrain:main"
 logdrain = "logdrain.cli:main"
+logdrain-gui = "logdrain.gui:main"
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]

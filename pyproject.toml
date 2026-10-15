@@ -7,10 +7,16 @@ authors = [
     { name = "mosf3t", email = "leonardmreidy@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "drain3>=0.9.11",
+    "pydantic>=2.0.0",
+    "pytest>=9.1.1",
+    "openpyxl>=3.1.0"
+]
 
 [project.scripts]
-logdrain = "logdrain:main"
+# logdrain = "logdrain:main"
+logdrain = "logdrain.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]

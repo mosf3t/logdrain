@@ -13,3 +13,6 @@ wheels/
 *.xlsx
 *.csv
 .~lock.*.xlsx
+
+# temporary files
+tmp

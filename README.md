@@ -116,3 +116,5 @@ The pipeline is spun up in parallel across `ubuntu-latest`, `windows-latest`, an
 - [x] compile the `PySide6` desktop application into a standalone executable using `pyinstaller` (`--noconsole` `--onefile`) 
 - [x] automatically package the cross-platform binaries; 
 - [ ] generate release notes from commit history using softprops/action-gh-release, and publishes them directly to the `GitHub Releases` page for the repository.
+
+Note that currently the complete changelog is not a standard `CHANGELOG` file; it is for now the off-the-shelf change tracking visible in the standard Github UI.

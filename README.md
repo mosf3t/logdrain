@@ -44,3 +44,10 @@ The primary goals and objectives outlined in the specification include:
     Implement a modular Python architecture accompanied by a comprehensive automated test suite.
 
     Follow the recommended vertical-slice implementation strategy: establish the record schema and Drain3 lifecycle first, proving the complete pipeline from raw log to mined template and Excel row before expanding features or designing isolated UI layouts.
+
+## References
+*logpai/drain3*
+[github | logpai/drain3](https://github.com/logpai/Drain3)
+
+*uv/docs*
+[astral docs | uv](https://docs.astral.sh/uv/)
